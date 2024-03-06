@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import { myFonts } from '@/app/ui/fonts';
 import Image from 'next/image';
-import dashboard from '@/app/ui/dashboard.module.css';  
+import dashboard from '@/app/ui/dashboard.module.css';
 
 export default function Page() {
   return (
