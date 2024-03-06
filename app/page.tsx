@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '@/app/ui/home.module.css';
 import { myFonts } from '@/app/ui/fonts';
 import Image from 'next/image';
-
+import dashboard from '@/app/ui/dashboard.module.css';  
 
 export default function Page() {
   return (
@@ -41,7 +41,14 @@ export default function Page() {
             height='760'
             className="hidden md:block"
             alt="Screenshots of the dashboard project showing desktop version"
-        />
+          />
+          <Image
+            src="/hero-mobile.png"
+            width='560'
+            height='620'
+            className="block md:hidden"
+            alt="Screenshots of the dashboard project showing mobile version"
+          />
         </div>
       </div>
     </main>
