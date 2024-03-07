@@ -25,7 +25,7 @@ const links = [
 export default function NavLinks() {
   const pathname = usePathname();
 
-  if (pathname === '/dashboard/customer') { }
+ 
   return (
     <>
       {links.map((link) => {
