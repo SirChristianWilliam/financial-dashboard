@@ -4,7 +4,7 @@ const nextConfig = {
       return [
         {
           source: '/dashboard/invoices',
-          destination: '/dashboard/Invoices',
+          destination: '/dashboard/invoices',
         },
       ];
     },
