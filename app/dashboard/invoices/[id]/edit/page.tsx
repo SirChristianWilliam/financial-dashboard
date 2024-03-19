@@ -4,9 +4,15 @@ import { fetchCustomers, fetchInvoiceById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
+
 export const metadata: Metadata = {
-  title: 'Edit Invoice',
-};
+    title: {
+      template: '%s | edit invoice template',
+      default: 'edit invoice default',
+    },
+    description: 'The official Next.js Learn Dashboard built with App Router.',
+    metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  };
 
 export default async function Page({ params }: { params: { id: string; }; }) {
   const id = params.id;

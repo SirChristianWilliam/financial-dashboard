@@ -1,6 +1,17 @@
 import Link from 'next/link';
 import { FaceFrownIcon } from '@heroicons/react/24/outline';
  
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: {
+      template: '%s | NOT FOUND',
+      default: 'Invoices Dashboard default title NOT FOUND',
+    },
+    description: 'The official Next.js Learn Dashboard built with App Router.',
+    metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  };
+
 export default function NotFound() {
   return (
     <main className="flex h-full flex-col items-center justify-center gap-2">
