@@ -12,19 +12,36 @@ import {
   FormattedCustomersTable,
   CustomerField,
 } from '@/app/lib/definitions';
+import React from 'react'; // Import React module
 
 
 export const metadata: Metadata = {
   title: 'Customers',
 };
 
-export default async function Page() {
-  const customersFiltered = await fetchFilteredCustomers("");
+
+// Add missing imports here
+
+export default async function Page({
+  searchParams,
+}: {
+  searchParams?: {
+    query?: string;
+    page?: string;
+  };
+}) {
+  const query = searchParams?.query || '';
+  const currentPage = Number(searchParams?.page) || 1;
+  const totalPages = await fetchInvoicesPages(query);
+  const customersFiltered = await fetchFilteredCustomers(query);
 
   return (
     <>
+      <Search placeholder={query} />
       <Table customers={customersFiltered as FormattedCustomersTable[]} />
+      <Pagination totalPages={totalPages} />
     </>
   );
 }
+
 
