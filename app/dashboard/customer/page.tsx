@@ -23,13 +23,8 @@ export default async function Page() {
 
   return (
     <>
-      <div className="w-full">
-        <div className="flex w-full items-center justify-between">
-          <h1 className={`${myFonts.lusitana.className} text-2xl`}>Customers</h1>
-        </div>
-
-      </div>
-      <Table customers={customersFiltered as FormattedCustomersTable[]} />    </>
+      <Table customers={customersFiltered as FormattedCustomersTable[]} />
+    </>
   );
 }
 
