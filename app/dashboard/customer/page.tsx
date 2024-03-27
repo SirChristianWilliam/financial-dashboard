@@ -13,7 +13,7 @@ import {
   CustomerField,
 } from '@/app/lib/definitions';
 import React from 'react'; // Import React module
-
+import { CreateCustomer } from '@/app/ui/invoices/buttons';
 
 export const metadata: Metadata = {
   title: 'Customers',
@@ -37,6 +37,9 @@ export default async function Page({
 
   return (
     <>
+    <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
+        <CreateCustomer id={''} />
+      </div>
       <Table customers={customersFiltered as FormattedCustomersTable[]} />
       <Pagination totalPages={totalPages} />
     </>
