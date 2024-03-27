@@ -37,7 +37,6 @@ export default async function Page({
 
   return (
     <>
-      <Search placeholder={query} />
       <Table customers={customersFiltered as FormattedCustomersTable[]} />
       <Pagination totalPages={totalPages} />
     </>
