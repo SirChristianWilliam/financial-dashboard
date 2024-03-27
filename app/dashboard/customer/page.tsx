@@ -14,7 +14,7 @@ import {
 } from '@/app/lib/definitions';
 import React from 'react'; // Import React module
 import { CreateCustomer } from '@/app/ui/invoices/buttons';
-
+ 
 export const metadata: Metadata = {
   title: 'Customers',
 };
