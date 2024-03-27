@@ -37,9 +37,7 @@ export default async function Page({
 
   return (
     <>
-    <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
-        <CreateCustomer />
-      </div>
+  
       <Table customers={customersFiltered as FormattedCustomersTable[]} />
       <Pagination totalPages={totalPages} />
     </>

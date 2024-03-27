@@ -18,7 +18,9 @@ export default async function CustomersTable({
         Customers
       </h1>
       <Search placeholder="Search customers..." />
-      <CreateCustomer />
+      <div className="mt-4 flex items-center justify-between gap-2 md:mt-8">
+        <CreateCustomer />
+      </div>
       <div className="mt-6 flow-root">
         <div className="overflow-x-auto">
           <div className="inline-block min-w-full align-middle">
