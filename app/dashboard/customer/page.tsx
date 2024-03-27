@@ -19,7 +19,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  const customers = await fetchCustomers(); // Fetch the customers data
   const customersFiltered = await fetchFilteredCustomers("");
 
   return (
@@ -27,27 +26,6 @@ export default async function Page() {
       <div className="w-full">
         <div className="flex w-full items-center justify-between">
           <h1 className={`${myFonts.lusitana.className} text-2xl`}>Customers</h1>
-        </div>
-
-        <div className="mt-5 flex w-full justify-center">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                {/* Add more table headers if needed */}
-              </tr>
-            </thead>
-            <tbody>
-              {customers.map((customer) => (
-                <tr key={customer.id}>
-                  <td>{customer.name}</td>
-                  <td>{customer.email}</td>
-                  {/* Add more table cells for other customer properties */}
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
 
       </div>
