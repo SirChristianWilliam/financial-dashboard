@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 import { myFonts } from '@/app/ui/fonts';
 import {
   AtSymbolIcon,
@@ -86,8 +86,16 @@ function LoginButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button className="mt-4 w-full" aria-disabled={pending}>
-      Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
-    </Button>
+    <>
+      <Button className="mt-4 w-full" aria-disabled={pending}>
+        Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
+      </Button>
+
+      <Link
+        href={'/signup'}
+        className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base">
+        Sign Up
+      </Link>
+    </>
   );
 }
