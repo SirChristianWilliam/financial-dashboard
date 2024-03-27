@@ -9,7 +9,7 @@ import { fetchInvoicesPages, fetchCustomers } from '@/app/lib/data';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Customer yess',
+  title: 'Customers',
 };
 
 export default async function Page() {
@@ -25,16 +25,16 @@ export default async function Page() {
         <table>
           <thead>
             <tr>
-              <th>Id</th>
               <th>Name</th>
+              <th>Email</th>
               {/* Add more table headers if needed */}
             </tr>
           </thead>
           <tbody>
             {customers.map((customer) => (
               <tr key={customer.id}>
-                <td>{customer.id}</td>
                 <td>{customer.name}</td>
+                <td>{customer.email}</td>
                 {/* Add more table cells for other customer properties */}
               </tr>
             ))}
